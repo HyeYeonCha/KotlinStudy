@@ -18,10 +18,21 @@ fun MyExample.printMessage() = println("asdfasdfas")
 // 구조가 다르므로 실행 가능
 fun MyExample.printMessage(message: String) = println("change $message")
 
+fun MyExample?.printNullOrNotNull() {
+    if (this == null) println("null null")
+    else println("not null")
+}
+
 fun main() {
     println("asdf".first())
     println("asdf".addFirst('A'))
 
     MyExample().printMessage()
     MyExample().printMessage(message = "message")
+
+    var myExample: MyExample? = null
+    myExample.printNullOrNotNull()
+
+    myExample = MyExample()
+    myExample.printNullOrNotNull()
 }
