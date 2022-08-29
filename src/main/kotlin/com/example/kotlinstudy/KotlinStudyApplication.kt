@@ -1,6 +1,6 @@
 package com.example.kotlinstudy
 
-abstract class Developer
+sealed class Developer
 {
     abstract val name:String
     abstract fun code(language: String)
@@ -18,13 +18,24 @@ data class Frontend(override val name:String): Developer() {
     }
 }
 
+// sealed class 는 when 사용시 반드시 상속받는 모든 class 를 구현해 줘야 함.
+object Other: Developer() {
+    override val name: String = "none"
+
+    override fun code(language: String) {
+        println("none object")
+    }
+
+}
+
 object DeveloperPool {
     val pool = mutableMapOf<String, Developer>()
 
     fun add(developer: Developer) = when(developer) {
         is Backend -> pool[developer.name] = developer
         is Frontend -> pool[developer.name] = developer
-        else -> println("nope.")
+        is Other -> println("no no no")
+//        else -> println("nope.") -> 필요없어짐, sealed class 이므로 하위 클래스를 컴파일러가 알아서 찾아주므로
     }
 
     fun get(name: String) = pool[name]
