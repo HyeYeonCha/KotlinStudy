@@ -51,4 +51,26 @@ fun main() {
     println(apply)
     println(apply.exam())
 
+    println("========")
+    val isValidatedUser = User(name = "mymy", age = 10).also {
+        it.isValidated()
+        println("success")
+    }
+
+    isValidatedUser.isValidated()
+}
+
+class User(
+        var name: String? = null,
+        var age: Int = 0
+) {
+
+
+    fun isValidated() {
+        if (!name.isNullOrEmpty() && age > 0) {
+            println(true)
+        } else {
+            println(false)
+        }
+    }
 }
