@@ -4,7 +4,7 @@ class RunExample {
     var a1: String? = null
     var a2: String? = null
 
-    fun exam(): Boolean {
+    fun exam():Boolean {
         println("123...")
         Thread.sleep(1000)
         println("...456")
@@ -32,4 +32,14 @@ fun main() {
 
 //    val result = run.exam()
 //    println(result)
+
+
+    // with -> 결과 반환 없이 내부에서 수신객체를 사용하고 싶을 때 사용
+    val str = "HI HI HI"
+    val length : Int = with(str) {
+        length
+    }
+
+    println(length)
+
 }
