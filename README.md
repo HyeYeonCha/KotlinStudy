@@ -8,3 +8,4 @@ kotlin 기본 문법 공부하기
 - `feature/sealed_class` : 자식 클래스를 제한하는 sealed class 의 사용 예시
 - `feature/extension_function` : 확장 함수 추가 및 널 안정성
 - `feature/generic` : 제네릭 기초 및 공변성, 반공변성
+- `feature/late_init` : 지연 초기화 및 안정적인 지연 초기화 사용법
