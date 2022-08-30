@@ -39,7 +39,16 @@ fun main() {
     val length : Int = with(str) {
         length
     }
-
     println(length)
+
+    val apply: RunExample = RunExample().apply {
+        // this 가 자동으로 붙음
+        a1 = "asdfa"
+        a2 = "a2"
+        exam()
+    }
+    // reference
+    println(apply)
+    println(apply.exam())
 
 }
