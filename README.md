@@ -9,3 +9,4 @@ kotlin 기본 문법 공부하기
 - `feature/extension_function` : 확장 함수 추가 및 널 안정성
 - `feature/generic` : 제네릭 기초 및 공변성, 반공변성
 - `feature/late_init` : 지연 초기화 및 안정적인 지연 초기화 사용법
+- `feature/scope_function` : 스코프 함수의 다양한 예제 (let, run, with, apply, also)
