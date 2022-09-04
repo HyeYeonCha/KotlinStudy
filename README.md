@@ -10,3 +10,4 @@ kotlin 기본 문법 공부하기
 - `feature/generic` : 제네릭 기초 및 공변성, 반공변성
 - `feature/late_init` : 지연 초기화 및 안정적인 지연 초기화 사용법
 - `feature/scope_function` : 스코프 함수의 다양한 예제 (let, run, with, apply, also)
+- `feature/exception` : 각종 예외처리 (안전한 예외처리)
