@@ -15,6 +15,13 @@ fun main() {
 
     val result: Int = plus(2, 3)
     println(result)
+
+
+    // 고차 함수 예제
+    val list2 = listOf("a", "b", "c")
+    val printStr: (String) -> Unit = { println(it) }
+    forEachStr(list2, printStr)
+
 }
 
 val printHello: () -> Unit = { println("Hello") }
@@ -37,4 +44,11 @@ val printMessage2: (String) -> Unit = { message -> println(message) }
 val printMessage3: (String) -> Unit = { println(it) }
 
 val plus: (Int, Int) -> Int = { a, b -> a + b}
+
+
+fun forEachStr(collection: Collection<String>, action: (String) -> Unit) {
+    for (item in collection) {
+        action(item)
+    }
+}
 
