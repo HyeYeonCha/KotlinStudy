@@ -25,6 +25,8 @@ fun main() {
     val upper : (String) -> String = { it.uppercase() }
     println(list2.map(upper))
 
+    // 내부 익명함수 호출하기
+    outerFunc()()
 }
 
 val printHello: () -> Unit = { println("Hello") }
@@ -54,4 +56,19 @@ fun forEachStr(collection: Collection<String>, action: (String) -> Unit) {
         action(item)
     }
 }
+
+//fun outerFunc() : () -> Unit {
+////    return fun() {
+////        println("익명 함수")
+////    }
+//
+//    return { println("익명 함수") }
+//}
+
+fun outerFunc() : () -> Unit = { println("익명 함수") }
+
+// 람다 표현식의 전체 식
+val sum: (Int, Int) -> Int = { x: Int, y: Int -> x + y }
+// 최대한 생략한 람다 식
+val sum2 = { x: Int, y: Int -> x + y }
 
