@@ -22,6 +22,9 @@ fun main() {
     val printStr: (String) -> Unit = { println(it) }
     forEachStr(list2, printStr)
 
+    val upper : (String) -> String = { it.uppercase() }
+    println(list2.map(upper))
+
 }
 
 val printHello: () -> Unit = { println("Hello") }
