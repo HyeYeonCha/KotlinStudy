@@ -27,6 +27,32 @@ fun main() {
 
     // 내부 익명함수 호출하기
     outerFunc()()
+
+    // 후행 람다의 예제
+    // 내부적으로 함수를 전달받아 함수를 선언하지 않아도 내부 로직 구현 가능
+    list2.forEach{
+        println(it)
+    }
+    list2.filter {
+        it == "a"
+    }
+
+    // 인자가 하나인 내부함수
+    arg1{
+        it.length
+        it.first()
+    }
+    // 인자가 2 개 이상인 내부함수
+    arg2{
+//        it  -> 사용할 수 없다. (인자가 두 개 이상이라)
+    // 별도의 내부 변수 선언이 필요함
+        a: String, b: String ->
+        a.length
+        b.first()
+    }
+
+    val callReference: () -> Unit = { printHello() }
+    callReference()
 }
 
 val printHello: () -> Unit = { println("Hello") }
@@ -72,3 +98,5 @@ val sum: (Int, Int) -> Int = { x: Int, y: Int -> x + y }
 // 최대한 생략한 람다 식
 val sum2 = { x: Int, y: Int -> x + y }
 
+fun arg1(block: (String) -> Unit){}
+fun arg2(block: (String, String) -> Unit){}
