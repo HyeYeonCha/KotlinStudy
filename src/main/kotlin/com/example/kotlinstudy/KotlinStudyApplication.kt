@@ -51,8 +51,20 @@ fun main() {
         b.first()
     }
 
-    val callReference: () -> Unit = { printHello() }
+//    val callReference: () -> Unit = { printHello() }
+    // :: 람다 레퍼런스 (함수 실행이 아닌 함수 그 자체를 넣어주어야 함)
+    val callReference = ::printHello
     callReference()
+
+//    val numberList = listOf("1", "2", "3")
+//    numberList.map{
+//        it.toInt()
+//    }.forEach{ println(it) }
+
+
+    val numberList = listOf("1", "2", "3")
+    // 클래스::멤버함수
+    numberList.map(String::toInt).forEach(::println)
 }
 
 val printHello: () -> Unit = { println("Hello") }
