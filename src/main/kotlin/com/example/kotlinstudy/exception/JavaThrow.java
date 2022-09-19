@@ -10,7 +10,7 @@ public class JavaThrow {
         throw new IOException("체크드 익셉션인 IOException 발생");
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 //        JavaThrow javaThrow = new JavaThrow();
 //        try {
 //            javaThrow.throwIOException();
