@@ -1,5 +1,7 @@
 package com.example.kotlinstudy.exception;
 
+import com.example.kotlinstudy.KotlinThrow;
+
 import java.io.IOException;
 
 public class JavaThrow {
@@ -9,11 +11,15 @@ public class JavaThrow {
     }
 
     public static void main(String[] args) {
-        JavaThrow javaThrow = new JavaThrow();
-        try {
-            javaThrow.throwIOException();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+//        JavaThrow javaThrow = new JavaThrow();
+//        try {
+//            javaThrow.throwIOException();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+
+        // try catch 없어도 사용가능
+        KotlinThrow kotlinThrow = new KotlinThrow();
+        kotlinThrow.throwIOException();
     }
 }
