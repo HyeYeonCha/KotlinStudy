@@ -12,6 +12,10 @@ class KotlinThrow {
     }
 }
 
+enum class CountryCode {
+    ko, jp, us, `do` // 예약어 do -> 백틱으로 사용가능
+}
+
 fun main() {
     val javaThrow = JavaThrow()
     javaThrow.throwIOException()
