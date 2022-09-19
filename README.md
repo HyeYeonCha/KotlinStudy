@@ -12,3 +12,4 @@ kotlin 기본 문법 공부하기
 - `feature/scope_function` : 스코프 함수의 다양한 예제 (let, run, with, apply, also)
 - `feature/exception` : 각종 예외처리 (안전한 예외처리)
 - `feature/lambda` : 람다 프로그래밍 예제
+- `feature/exception2` : 코틀린과 자바 코드의 예외 처리 비교와 코틀린에서 예약어에 접근하기
